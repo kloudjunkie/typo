@@ -630,5 +630,11 @@ describe Article do
     end
 
   end
+  
+  describe "Merge articles" do
+    it "should merge articles text"
+    it "should merge article comments"
+    it "article author should be logger in user"
+  end
 end
 

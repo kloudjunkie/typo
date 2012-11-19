@@ -725,5 +725,11 @@ describe ArticlesController, "assigned keywords" do
     @blog.save
     get 'index'
     assigns(:keywords).should == "typo, is, amazing"
+  end 
+  
+  decribe "merge articles" do
+    it "should open merged article"
+      #pending
+    end 
   end
 end

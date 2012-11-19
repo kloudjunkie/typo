@@ -23,6 +23,8 @@ module NavigationHelpers
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
+    when /^I am on article page of (.*)$/
+	'/admin/content/'+$1
 
     else
       begin
@@ -35,6 +37,11 @@ module NavigationHelpers
       end
     end
   end
-end
 
+then /^I have role as "(.*?)"$/ do |arg1|   
+#  fail unless arg1=='Typo Administrator'
+
+then /^I should see$/ do
+  page.should_have "Merge Articles"
+end
 World(NavigationHelpers)
